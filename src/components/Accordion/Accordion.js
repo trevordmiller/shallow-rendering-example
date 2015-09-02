@@ -28,8 +28,12 @@ class Accordion extends React.Component {
   render() {
     return (
       <div>
-        <a>{this.props.summary}</a>
-        <p>{this.props.details}</p>
+        <a onClick={this.toggle}>
+          {this.props.summary}
+        </a>
+        <p style={(this.state.active) ? styles.active : styles.inactive}>
+          {this.props.details}
+        </p>
       </div>
     );
   }

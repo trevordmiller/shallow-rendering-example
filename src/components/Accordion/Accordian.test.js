@@ -21,17 +21,13 @@ describe('Accordion', () => {
     assert.equal(result.type, 'div');
   });
 
-  it('should render the correct children', () => {
-    assert.equal(result.props.children, [
-      <a>This is a summary</a>,
-      <p>This is some details</p>
+  it('should render the correct children and be inactive by default', () => {
+    assert.deepEqual(result.props.children, [
+      <a onClick={Accordion.toggle}>This is a summary</a>,
+      <p style={{display: 'none'}}>This is some details</p>
     ]);
   });
 
-  // it('should be inactive by default', () => {
-  //   assert.equal(result.props.children[1].style.display, 'none');
-  // });
-  //
   // it('should become active when clicked', () => {
   //   result.props.onClick();
   //   result = renderAccordion();
