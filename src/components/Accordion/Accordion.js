@@ -28,15 +28,26 @@ class Accordion extends React.Component {
   render() {
     return (
       <div>
-        <a onClick={this.toggle}>
-          {this.props.summary}
-        </a>
-        <p style={(this.state.active) ? styles.active : styles.inactive}>
-          {this.props.details}
-        </p>
+        <a>{this.props.summary}</a>
+        <p>{this.props.details}</p>
       </div>
     );
   }
+
+  // working code below, but waiting to get tests passing with basic elements first ^
+
+  // render() {
+  //   return (
+  //     <div>
+  //       <a onClick={this.toggle}>
+  //         {this.props.summary}
+  //       </a>
+  //       <p style={(this.state.active) ? styles.active : styles.inactive}>
+  //         {this.props.details}
+  //       </p>
+  //     </div>
+  //   );
+  // }
 }
 
 Accordion.propTypes = {
