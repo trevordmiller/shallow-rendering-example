@@ -1,0 +1,40 @@
+{
+  "name": "testing-react-components-with-shallow-rendering",
+  "version": "1.0.0",
+  "description": "An example of TDD with the Shallow Renderer in React TestUtils, while building an accordian component. For an Egghead.io lesson.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevordmiller/testing-react-components-with-shallow-rendering.git"
+  },
+  "author": "Trevor D. Miller <trevordmiller@icloud.com> (www.trevordmiller.com)",
+  "license": "MIT",
+  "keywords": [],
+  "main": "dist/bundle.js",
+  "scripts": {
+    "lint": "eslint src webpack.config.js",
+    "test": "mocha src/**/*.test.js --compilers js:babel/register",
+    "test:watch": "npm test -- -w",
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "prepublish": "npm build"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "5.x.x",
+    "babel-core": "5.x.x",
+    "babel-loader": "5.x.x",
+    "eslint": "1.x.x",
+    "eslint-plugin-react": "3.x.x",
+    "file-loader": "0.8.x",
+    "mocha": "^2.3.0",
+    "pre-commit": "1.x.x",
+    "react": "0.13.x",
+    "react-hot-loader": "1.x.x",
+    "webpack": "1.x.x",
+    "webpack-dev-server": "1.x.x"
+  }
+}
